@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Таймер 1 година</title>
+    <link rel="stylesheet" href="11.css">
+  </head>
+  <body>
+    <div id="timer1">01:00:00</div>
+    <script>
+      let time1 = 3600;
+      const timer1Element = document.getElementById("timer1");
+
+      function updateTimer1() {
+        const hours = Math.floor(time1 / 3600);
+        const minutes = Math.floor((time1 % 3600) / 60);
+        const seconds = time1 % 60;
+        timer1Element.textContent = `${hours
+          .toString()
+          .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
+          .toString()
+          .padStart(2, "0")}`;
+        if (time1 === 1800) {
+          alert("Залишилось менше половини часу!");
+        }
+        if (time1 > 0) {
+          time1--;
+          setTimeout(updateTimer1, 1000);
+        }
+      }
+
+      updateTimer1();
+    </script>
+    <div id="timer2">00:30</div>
+    <button id="startButton" onclick="startTimer2()">Почати знову</button>
+    <script>
+      let time2 = 30000; 
+      const timer2Element = document.getElementById("timer2");
+      const animationElement = document.getElementById("animation");
+      const startButton = document.getElementById("startButton");
+
+      function updateTimer2() {
+        const seconds = Math.floor(time2 / 1000);
+        const milliseconds = time2 % 1000;
+        timer2Element.textContent = `00:${seconds.toString().padStart(2, "0")}`;
+        if (time2 === 10000) {
+        } 
+        if (time2 > 0) {
+          time2 -= 10;
+          setTimeout(updateTimer2, 10);
+        } else {
+          startButton.disabled = false;
+        }
+      }
+
+      function startTimer2() {
+        time2 = 30000;
+        startButton.disabled = true;
+        updateTimer2();
+      }
+
+      startTimer2();
+    </script>
+  </body>
+</html>
