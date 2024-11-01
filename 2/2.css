@@ -1,0 +1,19 @@
+.slider {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.slider__input{
+    width: 100%;
+    margin-bottom: 200px;
+}
+  
+  
+  .slider__image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    transition: transform 0.2s; /* Плавное изменение масштаба */
+  }
