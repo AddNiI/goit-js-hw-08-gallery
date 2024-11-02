@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="./12.css" />
+  </head>
+  <body>
+    <div class="timer" id="timer-1">
+      <div>
+        <div class="time_block">
+          <div class="field">
+            <span class="value" data-value="days">0</span>
+          </div>
+          <div class="field">
+            <span class="value" data-value="days2">0</span>
+          </div>
+        </div>
+        <span class="label">Days</span>
+      </div>
+      <div>
+        <div class="time_block">
+          <div class="field">
+            <span class="value" data-value="hours">0</span>
+          </div>
+          <div class="field">
+            <span class="value" data-value="hours2">0</span>
+          </div>
+        </div>
+        <span class="label">Hours</span>
+      </div>
+      <div>
+        <div class="time_block">
+          <div class="field">
+            <span class="value" data-value="mins">0</span>
+          </div>
+          <div class="field">
+            <span class="value" data-value="mins2">0</span>
+          </div>
+        </div>
+        <span class="label">Minutes</span>
+      </div>
+      <div>
+        <div class="time_block">
+          <div class="field">
+            <span class="value" data-value="secs">0</span>
+          </div>
+          <div class="field">
+            <span class="value" data-value="secs2">0</span>
+          </div>
+        </div>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+    <script src="./12.js"></script>
+    <script>
+      new CountdownTimer({
+        selector: "#timer-1",
+        targetDate: new Date("2024, 11, 14"),
+      });
+    </script>
+  </body>
+</html>
