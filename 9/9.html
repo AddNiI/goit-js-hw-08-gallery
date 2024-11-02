@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./9.css" />
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Додати нову задачу">
+    <button onclick="addTask()">Додати</button>
+    <ul id="taskList"></ul>
+
+    <h2>Form with LocalStorage</h2>
+    <form id="dataForm">
+        <label for="username">Iм'я:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="saveData()">Зберегти</button>
+    </form>
+
+    <h2>Bookmarks</h2>
+    <input type="text" id="bookmarkName" placeholder="Назва замiтки">
+    <input type="text" id="bookmarkURL" placeholder="Посилання на сайт">
+    <button onclick="addBookmark()">Додати</button>
+    <ul id="bookmarkList"></ul>
+
+    <h2>Contacts</h2>
+    <input type="text" id="firstName" placeholder="Iм'я">
+    <input type="text" id="lastName" placeholder="Прiзвище">
+    <input type="text" id="phone" placeholder="Номер телефона">
+    <input type="text" id="email" placeholder="Емайл">
+    <button onclick="addContact()">Додати</button>
+    <ul id="contactList"></ul>
+
+    <script src="./9.js"></script>
+</body>
+</html>
